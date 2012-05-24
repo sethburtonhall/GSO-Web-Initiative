@@ -1,0 +1,405 @@
+/* ============================================================
+
+320 and Up by Andy Clarke
+Version: 3.0
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+Website theme for:
+http://stuffandnonsense.co.uk/projects/320andup/
+
+============================================================ */
+
+// Variables and mixins
+@import "variables";
+@import "mixins";
+@themecolor : rgba(221,236,200,.5);
+
+// 1. ROOT 					==============================
+
+html {
+background : @themecolor url(../../img/graph.png) repeat 0 0;
+font-size : 62.5%;
+-webkit-overflow-scrolling : touch; 
+-webkit-tap-highlight-color : lighten(@basecolor, 30%); 
+-webkit-text-size-adjust : 100%; 
+-ms-text-size-adjust : 100%; }
+
+body { 
+margin : 0;
+background : @themecolor url(../../img/graph.png) repeat 0 0;
+padding : @baseline 0 0 0;
+width : 100%;
+.font-size(17);
+font-family : "facitweb-1","facitweb-2", sans-serif;
+line-height : 1.4;
+color : @black; 
+background-color : transparent; }
+
+// 2. TYPOGRAPHY 			==============================
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+font-weight : normal; 
+color: @black;
+}
+
+h1 {
+.fontfaceh1;
+margin-bottom:.1em;
+}
+
+h2 {
+.fontfaceh3;
+}
+
+h3 {
+.fontfaceh3;
+}
+
+h4{
+.fontfaceh4;
+}
+
+// 3. color 				==============================
+
+a, 
+a:visited,
+a:active, 
+a:focus {
+color : @linkcolor;
+	.transition;
+ }
+ 
+a:hover {
+	color:@black;
+
+}
+
+a:active, 
+a:focus { 
+position : relative; 
+top : 1px; 
+outline : none; }
+
+// 4. TEXTURE 				==============================
+
+// 5. ELEMENTS 				==============================
+
+.btn, .btn-large, .btn-warning {
+	.font-size(20);
+	.img-center;
+}
+
+[role="call-to-action"] ul li {
+	.font-size(15);
+	list-style:none;
+	padding: 2px 0 2px 25px;
+	background: url(../../img/plus.png) no-repeat left 4px;
+}
+
+// 6. LAYOUT 				==============================
+
+// banner
+
+[role="full-banner"] {
+margin : 0 auto @baseline;
+padding-top:@baseline;
+width : 100%;
+background-color:darken(@themecolor, 50%);
+border-top : 3px solid darken(@themecolor, 50%);
+border-bottom : 3px solid darken(@themecolor, 50%);
+}
+
+[role="banner"] {
+margin : 0 auto @baseline;
+width : 90%;
+}
+
+[role="banner"] hgroup {
+width : 100%;
+padding-top: 266px;
+background : transparent url(../../img/logo-240.jpg) no-repeat 50% 0;
+text-align : center; 
+  /* Transition anytime the margin changes */
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -ms-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+
+  /* Animate for 0.2 seconds */
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+[role="banner"] img {
+	margin: auto;
+}
+
+//  content
+
+.content {
+margin : 0 auto;
+width : 90%; }
+
+.grid img {
+	.drop-shadow;
+}
+
+//  navigation
+
+
+//  grids
+
+.grids {
+width : 95%;
+max-width: 1372px;
+margin : 0 auto @baseline;
+padding : @baseline 0;
+/*border-top : 5px solid darken(@themecolor, 50%);*/
+ }
+
+.grid {
+border-bottom : 1px solid @black; }
+
+.grid p {
+	width:100%;
+}
+
+.grids h2 {
+margin-bottom : @baseline - 1;
+border-bottom: 2px solid @black;
+padding: 5px 0px;
+ }
+
+//  contentinfo
+
+[role="contentinfo"] {
+background-color : darken(@themecolor, 50%);
+border-top : 3px solid darken(@themecolor, 50%); }
+
+[role="contentinfo"] small {
+	max-width:1511px;
+ }
+
+#callout {
+	display: block;
+	width:100%;
+	text-align: center;
+	border-bottom:none;
+}
+
+//  7. VENDOR-SPECIFIC 		==============================
+//  8. MODERNIZR 			==============================
+//  9. TEMPLATE SPECIFICS 	==============================
+
+#secondary-slider h3 {
+	margin-top: .5em;
+}
+
+.follow a {
+
+	height: 55px;
+	width: 55px;
+	padding: 0px 14px 10px 0px;
+	font-size: 48px;
+	line-height:0;
+}
+
+.share a {
+
+	height: 55px;
+	width: 55px;
+	padding: 0px 14px 10px 0px;
+	font-size: 48px;
+	line-height:0;
+}
+
+.icon-star-empty {
+	line-height: .8;
+}
+
+// sprites
+
+.briefcase {
+	float:left;
+    background: url(../../img/sprite.png) 0px 0px no-repeat;
+    display: block;
+    width: 58px;
+    height: 47px;
+}
+
+.browser {
+	float:left;
+    background: url(../../img/sprite.png) -68px 0px no-repeat;
+    display: block;
+    width: 58px;
+    height: 47px;
+}
+
+.chrome {
+	float:left;
+    background: url(../../img/sprite.png) 0px -61px no-repeat;
+    display: block;
+    width: 58px;
+    height: 47px;
+}
+
+.map {
+	float:left;
+    background: url(../../img/sprite.png) -68px -61px no-repeat;
+    display: block;
+    width: 58px;
+    height: 47px;
+}
+
+.photo {
+	float:left;
+    background: url(../../img/sprite.png) -136px 0px no-repeat;
+    display: block;
+    width: 58px;
+    height: 47px;
+}
+
+//  10. MEDIA QUERIES 		==============================
+
+// 320px
+@media only screen and (min-width: 320px) {
+
+body { 
+padding : 0px;
+ }
+
+h1, .h1 {
+font-size: 2.6rem;
+}
+
+h3, .h3 {
+font-size: 1.9rem;
+}
+
+}
+
+// 480px
+@media only screen and (min-width: 480px) {
+
+body { 
+padding : 0px;
+ }
+
+h1, .h1 {
+font-size: 3.5rem;}
+
+}
+
+// 600px
+@media only screen and (min-width: 600px) {
+
+body { 
+padding : 0px;
+ }
+
+[role="banner"] hgroup {
+padding-top : 0;
+padding-left : 200px;
+width : 100%;
+min-height : 145px;
+background : transparent url(../../img/logo-140.jpg) no-repeat 6.5% 0; 
+.box-sizing(border-box);
+text-align : left; }
+
+.btn, .btn-large, .btn-warning {
+	.font-size(20);
+	display:inline-block;
+}
+
+}
+
+// 768px
+@media only screen and (min-width: 768px) {
+
+h1, .h1 {
+font-size: 4.4rem;
+}
+
+[role="banner"] {
+height : 144px;
+ }
+
+
+[role="banner"], p,
+.content,
+[role="contentinfo"] small {
+width : 80%; }
+
+[role="banner"] hgroup {
+padding-top : 13px;
+padding-left : 200px;
+width : 100%;
+min-height : 145px;
+background : transparent url(../../img/logo-140.jpg) no-repeat 2.5% 0; 
+.box-sizing(border-box);
+text-align : left }
+
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+
+p,
+.content,
+[role="contentinfo"] small {
+width : 80%;
+}
+
+[role="contentinfo"] small {
+width : 80%;
+max-width:1372px;
+}
+
+[role="banner"] {
+width : 80%;
+height : 167px;
+max-width: 1381px;
+.box-sizing(border-box); }
+
+[role="banner"] hgroup {
+padding-left : 200px;
+width : 100%;
+min-height : 145px;
+background : transparent url(../../img/logo-140.jpg) no-repeat 2.5% 0; 
+.box-sizing(border-box);
+text-align : left }
+
+[role="banner"] .btn-group {
+padding-left : 0; }
+
+}
+
+
+// 1025px
+@media only screen and (min-width: 1025px) {
+
+h1, .h1 {
+font-size: 6.4rem;
+}
+
+.swipe {
+	display:none;
+}
+
+}
+
+// 2x
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
